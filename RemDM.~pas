@@ -1,0 +1,40 @@
+unit RemDM;
+
+interface
+
+uses
+  SysUtils, Classes, DB, ADODB;
+
+type
+  TdmRem = class(TDataModule)
+    dsRem: TDataSource;
+    adocRem: TADOConnection;
+    adotRem: TADOTable;
+    adotRemDSDesigner: TAutoIncField;
+    adotRemDSDesigner2: TWideStringField;
+    adotRemDSDesigner3: TWideStringField;
+    adotRemDSDesigner4: TIntegerField;
+    adotRemDSDesigner5: TDateTimeField;
+    adotRemDSDesigner6: TWideStringField;
+    adotRemDSDesigner7: TWideStringField;
+    adotRemDSDesigner8: TWideStringField;
+    adotRemDSDesigner9: TWideStringField;
+    adotRemDSDesigner10: TWideStringField;
+    adotRemDSDesigner11: TWideStringField;
+    adotRemDSDesigner12: TBCDField;
+    adotRemDSDesigner13: TBooleanField;
+    adotRemDSDesigner14: TBooleanField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmRem: TdmRem;
+
+implementation
+
+{$R *.dfm}
+
+end.
