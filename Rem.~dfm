@@ -1,8 +1,8 @@
 object fRem: TfRem
-  Left = 232
-  Top = 239
+  Left = 306
+  Top = 333
   Width = 1179
-  Height = 408
+  Height = 376
   BorderIcons = [biSystemMenu]
   Caption = #1041#1072#1079#1072' '#1076#1072#1085#1085#1099#1093' '#1087#1086' '#1088#1077#1084#1086#1085#1090#1091
   Color = clBtnFace
@@ -12,9 +12,13 @@ object fRem: TfRem
   Font.Name = 'Times New Roman'
   Font.Style = []
   KeyPreview = True
+  Menu = MainMenu1
   OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
+  DesignSize = (
+    1163
+    318)
   PixelsPerInch = 96
   TextHeight = 17
   object lKol: TLabel
@@ -63,12 +67,12 @@ object fRem: TfRem
     TabOrder = 3
     OnChange = eNameChange
   end
-  object DBGridEh1: TDBGridEh
+  object dbgRem: TDBGridEh
     Left = 0
-    Top = 46
+    Top = 49
     Width = 1163
-    Height = 324
-    Align = alBottom
+    Height = 269
+    Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = dmRem.dsRem
     Flat = False
     FooterColor = clWindow
@@ -83,7 +87,7 @@ object fRem: TfRem
     TitleFont.Height = -15
     TitleFont.Name = 'Times New Roman'
     TitleFont.Style = []
-    OnKeyDown = DBGridEh1KeyDown
+    OnKeyDown = dbgRemKeyDown
     Columns = <
       item
         EditButtons = <>
@@ -187,7 +191,7 @@ object fRem: TfRem
         Title.Font.Height = -13
         Title.Font.Name = 'Times New Roman'
         Title.Font.Style = [fsBold]
-        Width = 68
+        Width = 94
       end
       item
         EditButtons = <>
@@ -211,7 +215,7 @@ object fRem: TfRem
         Title.Font.Height = -13
         Title.Font.Name = 'Times New Roman'
         Title.Font.Style = [fsBold]
-        Width = 133
+        Width = 76
       end
       item
         EditButtons = <>
@@ -223,7 +227,7 @@ object fRem: TfRem
         Title.Font.Height = -13
         Title.Font.Name = 'Times New Roman'
         Title.Font.Style = [fsBold]
-        Width = 116
+        Width = 83
       end>
   end
   object cebStatus: TCheckBox
@@ -250,5 +254,13 @@ object fRem: TfRem
       #1057#1076#1077#1083#1072#1085
       #1059' '#1085#1072#1089
       #1042#1099#1076#1072#1085)
+  end
+  object MainMenu1: TMainMenu
+    Left = 1080
+    Top = 16
+    object WORD1: TMenuItem
+      Caption = #1057#1092#1086#1088#1084#1080#1088#1086#1074#1072#1090#1100' '#1074' WORD'
+      OnClick = WORD1Click
+    end
   end
 end

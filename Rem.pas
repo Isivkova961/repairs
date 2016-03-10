@@ -129,6 +129,11 @@ end;
 procedure TfRem.dbgRemKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
+  if key=13 then
+    begin
+      dmRem.adotRem.Edit;
+      dmRem.adotRem.Post;
+    end;
   if key=46 then
     if MessageDlg('Вы уверены что хотите удалить?',mtWarning,mbOkCancel,0)=mrOk then
       dmRem.adotRem.Delete;
